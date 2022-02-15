@@ -39,6 +39,9 @@ public class Offer implements Serializable {
 	@OneToMany(mappedBy="offer")
 	private List<Offer> offer = new ArrayList<>();
 	
+	@OneToMany(mappedBy="offer")
+	private List<Topic> topic = new ArrayList<>();
+	
 	public Offer() {
 	}
 
@@ -93,6 +96,10 @@ public class Offer implements Serializable {
 
 	public List<Offer> getOffer() {
 		return offer;
+	}
+
+	public List<Topic> getTopic() {
+		return topic;
 	}
 
 	@Override
