@@ -30,7 +30,7 @@ public class Deliver implements Serializable {
 	private Instant moment;
 	private DeliverStatus status;
 	private String feedback;
-	private String correctCount;
+	private Integer correctCount;
 	
 	@ManyToOne
 	@JoinColumns({
@@ -45,7 +45,7 @@ public class Deliver implements Serializable {
 	public Deliver() {
 	}
 
-	public Deliver(Long id, String uri, Instant moment, DeliverStatus status, String feedback, String correctCount,
+	public Deliver(Long id, String uri, Instant moment, DeliverStatus status, String feedback, Integer correctCount,
 			Enrollment enrollment, Lesson lesson) {
 		super();
 		this.id = id;
@@ -98,11 +98,11 @@ public class Deliver implements Serializable {
 		this.feedback = feedback;
 	}
 
-	public String getCorrectCount() {
+	public Integer getCorrectCount() {
 		return correctCount;
 	}
 
-	public void setCorrectCount(String correctCount) {
+	public void setCorrectCount(Integer correctCount) {
 		this.correctCount = correctCount;
 	}
 
